@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:text="@string/app_name"
+        android:textColor="#42A5F5"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+
+        />
+
+    <TextView
+        android:id="@+id/weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:text="WEIGHT"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/heightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:text="HEIGHT"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/weightTV"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightTV" />
+
+    <TextView
+        android:id="@+id/kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:text="kg"
+        android:textColor="@color/yellow_font"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/weight"
+        app:layout_constraintEnd_toEndOf="@id/weightTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/weight" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/heightTV"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@+id/weight"
+        app:layout_constraintTop_toBottomOf="@id/heightTV" />
+
+    <TextView
+        android:id="@+id/cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:text="cm"
+        android:textColor="@color/yellow_font"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/height"
+        app:layout_constraintEnd_toEndOf="@id/heightTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/height" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="#648B6B"
+        android:paddingLeft="15sp"
+        android:paddingTop="5sp"
+        android:paddingRight="15sp"
+        android:paddingBottom="5sp"
+        android:text="Calculate!"
+        android:textColor="@color/yellow_font"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/heightTV"
+        app:layout_constraintStart_toStartOf="@+id/weightTV"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <TextView
+        android:id="@+id/yourBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+
+        android:textColor="@color/yellow_font"
+        android:textSize="30sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/calculate"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@id/calculate" />
+
+    <TextView
+        android:id="@+id/bmiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="@+id/yourBMI"
+        app:layout_constraintStart_toStartOf="@+id/yourBMI"
+        app:layout_constraintTop_toBottomOf="@+id/yourBMI" />
+
+    <TextView
+        android:id="@+id/typeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ropa_sans"
+
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/bmiTV"
+        app:layout_constraintStart_toStartOf="@id/bmiTV"
+        app:layout_constraintTop_toBottomOf="@id/bmiTV" />
+
+    <TableLayout
+        android:id="@+id/statusTable"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_bg"
+        android:stretchColumns="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeTV">
+
+        <TableRow>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:fontFamily="@font/ropa_sans"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:text="BMI"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="@font/ropa_sans"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="WEIGHT STATUS"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+
+                android:fontFamily="@font/ropa_sans"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Below 18.5"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Underweight"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="18.5 - 24.9"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Normal"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="25.0 - 29.9"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Overweight"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Above 30"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:fontFamily="@font/ropa_sans"
+                android:gravity="center"
+                android:text="Obese"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
